@@ -1,0 +1,24 @@
+/* The Events Calendar */
+
+/* 
+.tribe-events-calendar-buttons a { margin: 50px 0 0 10px; }
+.tribe-events-month-nav { margin-top: 20px; padding-top: 10px;}
+table.tribe-events-calendar { margin-top: 3em !important; }
+#tribe-events-calendar-header {  }
+ */
+
+.tribe-events-event-list-meta td { background-color: transparent; }
+ul.upcoming {
+  font-size: 0.8em;
+  padding: 0 1em;
+  line-height: 1.5em;
+}
+.dig-in { text-align: center; }
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	body { min-width: 550px; }
+	.tribe-events-thismonth, .tribe-events-othermonth { min-width: 50px; max-width:60px; }
+	#tribe-events-calendar-header { padding-top: 3em; }
+	.tribe-events-calendar-buttons { top:0; left:0; }
+}
