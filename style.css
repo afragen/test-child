@@ -2,11 +2,11 @@
 Theme Name: Test
 Theme URI: http://drfragen.info/
 Github Theme URI: https://github.com/afragen/test-child
-Description: Child-Theme of TwentyEleven.
+Description: Child-Theme of TwentyTwelve.
+Author: Andy Fragen
 Template: twentytwelve
 Template Version: 1.0
-Author: Andy Fragen
-Version: 0.3
+Version: 0.4
 */
 
 
@@ -46,6 +46,6 @@ Version: 0.3
 	.singular .entry-title { line-height: 1em; }
 	#access a { line-height: 2em; }
 	#site-generator { padding: 1em 0.5em; }
-	.entry-content p { padding: 1em; }
  */
+	.entry-content p { padding: 1em; }
 }
