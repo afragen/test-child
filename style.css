@@ -3,14 +3,14 @@ Theme Name: Test
 Theme URI: http://drfragen.info/
 Github Theme URI: https://github.com/afragen/test-child
 Description: Child-Theme of TwentyEleven.
-Template: twentyeleven
+Template: twentytwelve
 Template Version: 1.0
 Author: Andy Fragen
-Version: 0.2
+Version: 0.3
 */
 
 
-@import url("../twentyeleven/style.css");
+@import url("../twentytwelve/style.css");
 
 
 #main-blog p img {
@@ -38,6 +38,7 @@ Version: 0.2
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-device-width: 480px) {
+/* 
 	body { min-width: 550px; }
 	#content td>img { max-width: 75px; }
 	#main, .singular.page .hentry { padding: 0;}
@@ -46,4 +47,5 @@ Version: 0.2
 	#access a { line-height: 2em; }
 	#site-generator { padding: 1em 0.5em; }
 	.entry-content p { padding: 1em; }
+ */
 }
