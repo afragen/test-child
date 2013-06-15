@@ -21,4 +21,5 @@ ul.upcoming {
 	.tribe-events-thismonth, .tribe-events-othermonth { min-width: 50px; max-width:60px; }
 	#tribe-events-calendar-header { padding-top: 3em; }
 	.tribe-events-calendar-buttons { top:0; left:0; }
+	/* #tribe-events-event-meta .column { width: auto; } */
 }
