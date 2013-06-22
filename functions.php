@@ -116,4 +116,4 @@ function list_my_plugins() {
 		}
 	}
 }
-if( is_admin() ) { list_my_plugins(); }
+//if( is_admin() ) { list_my_plugins(); }
