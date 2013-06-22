@@ -105,13 +105,12 @@ function list_my_plugins() {
     foreach ( $plugins as $plugin ) {
  		foreach ( $activeplugins as $activeplugin ) {
 			$parts =  explode( '/', $activeplugin );
-      		if ( strpos($plugin['PluginURI'], "github" ) ) { $uri = explode( '/', $plugin['PluginURI'] ); }
+      		if ( strpos($plugin['PluginURI'], "github" ) ) { $uri = explode( '/', untrailingslashit($plugin['PluginURI']) ); }
 			if( strpos($plugin['PluginURI'], $parts[0]) ) {
 				if( $uri[4] == $parts[0] ) {
-					//echo $parts[0] . "<br />\n";
-					echo $parts[1] . "<br />\n";
-					//echo $uri[4] . "<br />\n";
-					echo $plugin['Name'] . " v." . $plugin['Version'] . " - " . $plugin['PluginURI'] . "<br />\n";
+					echo $plugin['Name'] . " v." . $plugin['Version'] . " - " . untrailingslashit($plugin['PluginURI']) . "&nbsp;::&nbsp;";
+					echo $uri[3] . ' - ' . $uri[4] . '/' . $parts[1];
+					echo "<br />\n";
 				}
 			}
 		}
