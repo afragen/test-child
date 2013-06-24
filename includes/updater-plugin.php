@@ -15,15 +15,12 @@ if(!empty($_GET['action']) && ($_GET['action'] == 'do-core-reinstall' || $_GET['
 }
 
 function wlfw_transient_update_themes_filter($data){
-	global $WLFW_UPDATE_DATA;
+	global $WLFW_UPDATE_DATA, $theme_data;
 	if(!empty($WLFW_UPDATE_DATA)) return $WLFW_UPDATE_DATA;
-	
-	if( function_exists('wp_get_theme') )
-		$theme_data = wp_get_theme();
-	else
-		$theme_data = get_theme_data( get_stylesheet_directory() . '/style.css' );
-	
-	$theme_key = $theme_data->template;
+
+	$theme_data = ( function_exists( 'wp_get_theme' ) ? wp_get_theme() : get_theme_data( get_stylesheet_directory() . '/style.css' ) );
+
+	$theme_key = $theme_data->stylesheet;
 	if(!empty($theme_key))  $theme_data = wp_get_theme($theme_key);
 	$theme = $theme_data;
 	$github_username = 'afragen';
@@ -119,12 +116,13 @@ function wlfw_transient_update_themes_filter($data){
  */
 add_filter('upgrader_source_selection', 'wlfw_upgrader_source_selection_filter', 10, 3);
 function wlfw_upgrader_source_selection_filter($source, $remote_source=NULL, $upgrader=NULL){
+	global $theme_data;
 	if( isset($_GET['action']) && stristr($_GET['action'], 'theme') ){
 		$upgrader->skin->feedback("Trying to customize theme folder name...");
-		if( isset($source, $remote_source) && stristr($source, 'whitelabel-framework') ){
-			$corrected_source = $remote_source . '/whitelabel-framework/';
+		if( isset($source, $remote_source) && stristr($source, $theme_data->stylesheet) ){
+			$corrected_source = $remote_source . '/' . $theme_data->stylesheet . '/';
 			if(@rename($source, $corrected_source)){
-				$upgrader->skin->feedback("Theme folder name corrected to: whitelabel-framework");
+				$upgrader->skin->feedback("Theme folder name corrected to: " . $theme_data->stylesheet);
 				return $corrected_source;
 			} else {
 				$upgrader->skin->feedback("Unable to rename downloaded theme.");
@@ -144,7 +142,7 @@ function wlfw_no_ssl_http_request_args($args, $url) {
 
 add_filter('theme_action_links', 'wlfw_append_theme_actions', 10, 2);
 function wlfw_append_theme_actions($actions, $theme = NULL) {
-	if($theme->stylesheet != 'whitelabel-framework') return $actions;
+	//if($theme->stylesheet != 'whitelabel-framework') return $actions;
 	
 		if ( eregi("MSIE", getenv( "HTTP_USER_AGENT" ) ) || eregi("Internet Explorer", getenv("HTTP_USER_AGENT" ) ) ) {
 ?>		
@@ -167,7 +165,7 @@ function wlfw_append_theme_actions($actions, $theme = NULL) {
 	return $actions;	
 }
 
-function wlfw_append_theme_actions_content($stylesheet = 'whitelabel-framework'){
+function wlfw_append_theme_actions_content($stylesheet = 'test-child'){
 	global $WLFW_UPDATE_DATA;
 	if(!isset($WLFW_UPDATE_DATA)) $WLFW_UPDATE_DATA = wlfw_transient_update_themes_filter($WLFW_UPDATE_DATA);
 	
