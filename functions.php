@@ -118,4 +118,3 @@ function list_my_plugins() {
 }
 //if( is_admin() ) { list_my_plugins(); }
 
-include_once 'includes/updater-plugin.php';
