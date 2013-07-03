@@ -23,3 +23,5 @@ ul.upcoming {
 	.tribe-events-calendar-buttons { top:0; left:0; }
 	/* #tribe-events-event-meta .column { width: auto; } */
 }
+
+h2.tribe-events-page-title { color: green; }
