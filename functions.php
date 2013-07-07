@@ -79,7 +79,7 @@ function my_legend_css() {
 
 if( class_exists( 'Tribe_Events_Category_Colors' )) {
 
-	teccc_reposition_legend('tribe_events_month_after_the_grid');
+	teccc_reposition_legend('tribe_events_after_header');
 	//teccc_remove_default_legend();
 	//teccc_ignore_slug( 'just-show-up' );
 	teccc_add_text_color( 'Red', '#f00' );

@@ -8,12 +8,14 @@ table.tribe-events-calendar { margin-top: 3em !important; }
  */
 
 .tribe-events-event-list-meta td { background-color: transparent; }
-ul.upcoming {
+li.tribe-events-adv-list-widget ol li {
   font-size: 0.8em;
-  padding: 0 1em;
+  margin-bottom: 15px;
   line-height: 1.5em;
 }
-.dig-in { text-align: center; }
+.tribe-events-widget-link { text-align: center; }
+
+table.tribe-events-calendar { background-color: #fff; }
 
 /* iPhone [portrait + landscape] */
 @media only screen and (max-device-width: 480px) {
