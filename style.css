@@ -2,15 +2,15 @@
 Theme Name: Test
 Theme URI: http://drfragen.info/
 Github Theme URI: https://github.com/afragen/test-child
-Description: Child-Theme of TwentyTwelve.
+Description: Child-Theme of TwentyThirteen.
 Author: Andy Fragen
-Template: twentytwelve
+Template: twentythirteen
 Template Version: 1.0
-Version: 0.6.3
+Version: 0.6.4
 */
 
 
-@import url("../twentytwelve/style.css");
+@import url("../twentythirteen/style.css");
 
 
 #main-blog p img {
