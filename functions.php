@@ -13,18 +13,6 @@ function tribe_ical_outlook_modify( $content ) {
 	return $content;
 }
 
-//add_filter( 'tribe_ical_feed_item', 'tribe_ical_modify_event', 10, 2 );
-function tribe_ical_modify_event( $item, $eventPost ) {
-	$searchValue = "DESCRIPTION";
-	$fl_array = preg_grep('/^' . "$searchValue" . '.*/', $item);
-	$key = array_values($fl_array);
-	$keynum = key($fl_array);
-	//$mod = substr($key[0], 0, 1000);
-        $mod = $searchValue . ":Please visit for more information: " .get_permalink( $eventPost->ID );
-	unset($item[$keynum]);
-	$item[] = $mod;
-	return $item;
-}
 
 //add_action( 'wp_head', 'template_name' );
 function template_name() {
@@ -44,33 +32,6 @@ function test_version() {
 	var_dump($wp_34);	
 }
 
-// Try to stop the first event category from being added to the article classes
-// (when the default page template is used) - Thanks Barry
-//add_filter('post_class', 'remove_tribe_cat_once', 1);
-
-function remove_tribe_cat_once(array $classes) {
-	if ( class_exists('TribeEvents') ) {
-		// The Main Calendar Page or Calendar Category Page
-		if (( tribe_is_month() && !is_tax() ) || ( tribe_is_month() && is_tax() )) { 
-			static $count = 0;
-			if ($count++ === 0) {
-				remove_filter('post_class', array(TribeEvents::instance(), 'post_class'));
-			} else {
-				add_filter('post_class', array(TribeEvents::instance(), 'post_class'));
-				remove_filter('post_class', 'remove_tribe_cat_once');
-			}
-			return $classes;
-		}
-	}
-}
-
-
-//add_action( 'wp_enqueue_scripts', 'tribe_user_css_overrides' );
-// function tribe_user_css_overrides () {
-// 	$tec_user_css = '/events/events.css';
-// 	if ( file_exists( get_stylesheet_directory() . $tec_user_css ) )
-// 		wp_enqueue_style( 'tribe-user-css', get_stylesheet_directory_uri() . $tec_user_css ) ;	
-// }
 
 //add_action( 'teccc_add_legend_css', 'my_legend_css' );
 function my_legend_css() {
@@ -79,10 +40,12 @@ function my_legend_css() {
 
 if( class_exists( 'Tribe_Events_Category_Colors' )) {
 
-	teccc_reposition_legend('tribe_events_before_footer');
+	//teccc_reposition_legend('tribe_events_before_footer');
 	//teccc_remove_default_legend();
 	//teccc_ignore_slug( 'just-show-up' );
 	teccc_add_text_color( 'Red', '#f00' );
+	teccc_add_legend_view( 'upcoming' );
+	teccc_add_legend_view( 'photo' );
 
 }
 
