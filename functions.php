@@ -81,3 +81,12 @@ function list_my_plugins() {
 }
 //if( is_admin() ) { list_my_plugins(); }
 
+
+add_action( 'tribe_events_after_the_title', 'my_category_description' );
+function my_category_description() {
+	global $wp_query;
+	if( !isset( $wp_query->query_vars['post_type'] ) or !isset( $wp_query->query_vars['eventDisplay'] ) or !isset( $wp_query->queried_object ) ) return;
+	if( $wp_query->query_vars['post_type'] === 'tribe_events' or $wp_query->query_vars['post_type'][0] === 'tribe_events' and $wp_query->query_vars['eventDisplay'] === 'upcoming' )
+		echo '<div style="text-align:center;">' . $wp_query->queried_object->description . '</div>';
+}
+
