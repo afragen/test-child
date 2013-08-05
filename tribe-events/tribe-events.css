@@ -27,3 +27,12 @@ table.tribe-events-calendar { background-color: #fff; }
 }
 
 h2.tribe-events-page-title { color: green; }
+
+/* 
+li.tribe-events-list-widget-events h4.entry-title.summary a { font-size: 12px; }
+li.tribe-events-list-widget-events h4.entry-title.summary { padding-right: 100px; line-height: 30px;}
+.tribe-events-list-widget ol { margin:0; }
+ */
+
+
+/* .tribe-mini-calendar-event li.tribe-events-list-widget-event h2.tribe-events-category-meeting a { color: red; } */
