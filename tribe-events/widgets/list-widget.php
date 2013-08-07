@@ -23,7 +23,7 @@ $widget_args = tribe_events_get_adv_list_widget_args();
 extract($widget_args);
 global $post;
 ?>
-<?php do_action( 'tribe_mini_calendar_after_list_wrapper' ); ?>
+<?php do_action( 'tribe_before_widget' ); ?>
 
 <li>
 	<h4 class="entry-title summary tribe-events-category-<?php echo array_shift(tribe_get_event_cat_slugs($post->ID)); ?>">

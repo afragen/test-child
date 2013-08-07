@@ -13,8 +13,8 @@
 
 if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
+<?php do_action( 'tribe_before_widget' ); ?>
 <div class="tribe-mini-calendar-list-wrapper">
-	<?php do_action( 'tribe_mini_calendar_after_list_wrapper' ); ?>
 	<div class="tribe-events-loop hfeed vcalendar">
 
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -25,7 +25,7 @@
 ?>
 
 <?php global $post; ?>
-<?php do_action( 'tribe_mini_calendar_after_list_wrapper' ); ?>
+<?php do_action( 'tribe_before_widget' ); ?>
 
 <li class="tribe-events-list-widget-events">
 	<h4 class="entry-title summary  tribe-events-category-<?php echo array_shift(tribe_get_event_cat_slugs($post->ID)); ?>">
