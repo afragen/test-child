@@ -28,7 +28,7 @@
 <?php do_action( 'tribe_before_widget' ); ?>
 
 <li class="tribe-events-list-widget-events">
-	<h4 class="entry-title summary  tribe-events-category-<?php echo array_shift(tribe_get_event_cat_slugs($post->ID)); ?>">
+	<h4 class="entry-title summary  tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>">
 			<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	</h4>	
 	<!-- Event Time -->
