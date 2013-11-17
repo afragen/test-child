@@ -1,76 +1,39 @@
 <?php
 /**
- * Events Pro List Widget Template
+ * Events List Widget Template
  * This is the template for the output of the events list widget. 
  * All the items are turned on and off through the widget admin.
- * There is currently no default styling, which is highly needed.
+ * There is currently no default styling, which is needed.
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/widgets/list-widget.php
+ * This view contains the filters required to create an effective events list widget view.
  *
- * When the template is loaded, the following vars are set: $start, $end, $venue, 
- * $address, $city, $state, $province'], $zip, $country, $phone, $cost
+ * You can recreate an ENTIRELY new events list widget view by doing a template override,
+ * and placing a list-widget.php file in a tribe-events/widgets/ directory 
+ * within your theme directory, which will override the /views/widgets/list-widget.php.
  *
- * @package TribeEventsCalendarPro
- * @since  1.0
+ * You can use any or all filters included in this file or create your own filters in 
+ * your functions.php. In order to modify or extend a single filter, please see our
+ * readme on templates hooks and filters (TO-DO)
+ *
+ * @return string
+ *
+ * @package TribeEventsCalendar
+ * @since  2.1
  * @author Modern Tribe Inc.
  *
  */
-
-if ( !defined('ABSPATH') ) { die('-1'); } ?>
-
-<?php 
-$widget_args = tribe_events_get_adv_list_widget_args(); 
-extract($widget_args);
-global $post;
 ?>
+
+<?php global $post; ?>
 <?php do_action( 'tribe_before_widget' ); ?>
 
-<li>
-	<h4 class="entry-title summary tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>">
-		<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark"><?php the_title(); ?></a>
-	</h4>
+<li class="tribe-events-list-widget-events">
+	<h4 class="entry-title summary  tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>">
+			<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark"><?php the_title(); ?></a>
+	</h4>	
+	<!-- Event Time -->
 	<div class="duration">
-			<?php echo tribe_events_event_schedule_details(); ?>	
+		<?php echo tribe_events_event_schedule_details(); ?>
 	</div>
-	<?php if ( $cost && tribe_get_cost() != '' ) { ?>
-		<span class="tribe-events-divider">|</span>
-		<div class="tribe-events-event-cost">
-			<?php echo tribe_get_cost( null, true ); ?>
-		</div>
-	<?php } ?>			
-	<div class="vcard adr location">	
-
-		<?php if ( $venue  && tribe_get_venue() != '') { ?>
-			<span class="fn org tribe-venue"><?php echo tribe_get_venue_link(); ?></span> 
-		<?php } ?>
-
-		<?php if ( $address && tribe_get_address() != '' ) { ?>
-			<span class="street-address"><?php echo tribe_get_address(); ?></span>
-		<?php } ?>
-
-		<?php if ( $city && tribe_get_city() != '' ) { ?>
-			<span class="locality"><?php echo tribe_get_city(); ?></span>
-		<?php } ?>
-
-		<?php if ( $region && tribe_get_region() !='' ) { ?>
-			<span class="region"><?php echo tribe_get_region(); ?></span>
-		<?php	} ?>
-
-		<?php if ( $zip && tribe_get_zip() != '' ) { ?>
-			<span class="postal-code"><?php echo tribe_get_zip(); ?></span>
-		<?php } ?>
-
-		<?php if ( $country  && tribe_get_country() != '') { ?>
-			<span class="country-name"><?php echo tribe_get_country(); ?></span>
-		<?php } ?>
-
-		<?php if ( $organizer && tribe_get_organizer() != '' ) { ?>
-		<?php _e( 'Organizer:', 'tribe-events-calendar-pro' ); ?>
-				<span class="tribe-organizer"><?php echo tribe_get_organizer_link(); ?></span>
-		<?php } ?>
-
-		<?php if ( $phone && tribe_get_phone() != '' ) { ?>
-			<span class="tel"><?php echo tribe_get_phone(); ?></span>
-		<?php } ?>
-	</div>
+	<!-- Event Title -->
 </li>

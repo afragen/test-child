@@ -3,7 +3,7 @@
  * Mini Calendar List Loop
  * This file sets up the structure for the list loop
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/widgets/mini-calendar/list.php
+ * Override this template in your own theme by creating a file at [your-theme]/tribe-events/pro/widgets/mini-calendar/list.php
  *
  * @package TribeEventsCalendar
  * @since  3.0
@@ -22,7 +22,7 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
 			<!-- Event  -->
 			<?php tribe_events_event_classes() ?>
-				<?php tribe_get_template_part('widgets/mini-calendar/single-event') ?>
+				<?php tribe_get_template_part('pro/widgets/mini-calendar/single-event') ?>
 			<!-- .hentry .vevent -->
 
 
