@@ -37,7 +37,7 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 		<?php foreach ($events as $event) { ?>
 			<li>
 			<?php var_dump($event); ?>
-				<h4 class="tribe-events-category-<?php echo array_shift(tribe_get_event_cat_slugs($post->ID)); ?>"><a href="<?php echo tribe_get_event_link(); ?>"><a href="<?php echo get_permalink($event); ?>"><?php echo get_the_title($event->ID); ?></a></h4>
+				<h4 class="tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>"><a href="<?php echo tribe_get_event_link(); ?>"><a href="<?php echo get_permalink($event); ?>"><?php echo get_the_title($event->ID); ?></a></h4>
 				<?php echo tribe_events_event_schedule_details( $event->ID ) ?>
 				<?php if ( tribe_get_cost( $event->ID ) != '' ) { ?>
 				<span class="tribe-events-divider">|</span>
