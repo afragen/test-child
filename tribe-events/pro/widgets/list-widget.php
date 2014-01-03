@@ -21,12 +21,11 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 <?php 
 $widget_args = tribe_events_get_adv_list_widget_args(); 
 extract($widget_args);
-global $post;
 ?>
 <?php do_action( 'tribe_before_widget' ); ?>
 
-<li>
-	<h4 class="entry-title summary tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>">
+<li class="<?php tribe_events_event_classes() ?>">
+	<h4 class="entry-title summary">
 		<a href="<?php echo tribe_get_event_link(); ?>" rel="bookmark"><?php the_title(); ?></a>
 	</h4>
 	<div class="duration">

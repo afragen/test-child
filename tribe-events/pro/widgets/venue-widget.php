@@ -15,7 +15,6 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 <?php global $post; ?> 
 
 <?php do_action( 'tribe_before_widget' ); ?>
-<h3 class="tribe_widget-title"><?php echo $title; ?></h3>
 <div class="tribe-venue-widget-wrapper">
 	<div class="tribe-venue-widget-venue">
 		<div class="tribe-venue-widget-venue-name">
@@ -30,22 +29,24 @@ if ( !defined('ABSPATH') ) { die('-1'); } ?>
 			<?php echo tribe_get_meta_group( $venue_ID, 'tribe_event_venue' ) ?>
 		</div>
 	</div>
-	<?php if (count($events) == 0) { ?>
-	<?php _e('No upcoming events.', 'tribe-events-calendar-pro'); ?>
-	<?php } ?>
+	<?php if ( 0 === $events->post_count ): ?>
+		<?php _e('No upcoming events.', 'tribe-events-calendar-pro'); ?>
+	<?php else: ?>
 	<ul class="tribe-venue-widget-list">
-		<?php foreach ($events as $event) { ?>
+		<?php while ( $events->have_posts() ): ?>
+			<?php $events->the_post(); ?>
 			<li>
-			<?php var_dump($event); ?>
-				<h4 class="tribe-events-category-<?php echo current(tribe_get_event_cat_slugs($post->ID)); ?>"><a href="<?php echo tribe_get_event_link(); ?>"><a href="<?php echo get_permalink($event); ?>"><?php echo get_the_title($event->ID); ?></a></h4>
-				<?php echo tribe_events_event_schedule_details( $event->ID ) ?>
-				<?php if ( tribe_get_cost( $event->ID ) != '' ) { ?>
+			<?php //var_dump($post); ?>
+				<h4 class="tribe-events-category-<?php echo current(tribe_get_event_cat_slugs( $post->ID ) ) ?>"><a href="<?php echo tribe_get_event_link() ?>"><?php echo get_the_title( get_the_ID() ) ?></a></h4>
+				<?php echo tribe_events_event_schedule_details() ?>
+				<?php if ( tribe_get_cost( get_the_ID() ) != '' ): ?>
 				<span class="tribe-events-divider">|</span>
 					<span class="tribe-events-event-cost">
-						<?php echo tribe_get_cost( $event->ID, true ); ?>
+						<?php echo tribe_get_cost( get_the_ID(), true ); ?>
 					</span>
-				<?php } ?>	
+				<?php endif; ?>
 			</li>
-		<?php } ?>
+	<?php endwhile;	?>
 	</ul>
+	<?php endif; ?>
 </div>
