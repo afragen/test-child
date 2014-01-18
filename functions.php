@@ -90,3 +90,8 @@ function my_category_description() {
 		echo '<div style="text-align:center;">' . $wp_query->queried_object->description . '</div>';
 }
 
+add_filter('teccc_legend_html', 'add_legend_explanation');
+function add_legend_explanation($html) {
+	echo '<div class="legend-explanation"> To focus on events from only one of these categories, just click on the relevant label. </div>'
+		. $html;
+}
