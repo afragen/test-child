@@ -95,3 +95,9 @@ function add_legend_explanation($html) {
 	echo '<div class="legend-explanation"> To focus on events from only one of these categories, just click on the relevant label. </div>'
 		. $html;
 }
+
+add_filter('tribe_events_mobile_breakpoint','tribe_events_mobile_breakpoint_override');
+function tribe_events_mobile_breakpoint_override ($original) {
+	// Return the minimum width (in pixels) that a screen can be before before being switched to responsive view
+	return 650;
+}
