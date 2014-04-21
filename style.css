@@ -1,17 +1,16 @@
 /*
 Theme Name:       Test
 Theme URI:        http://drfragen.info/
-Description:      Child-Theme of TwentyTwelve.
+Description:      Child-Theme of TwentyFourteen.
 Author:           Andy Fragen
-Template:         twentytwelve
-Template Version: 1.1.1
-Version:          0.7.1
+Template:         twentyfourteen
+Version:          0.8.0
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
 */
 
 
-@import url("../twentytwelve/style.css");
+@import url("../twentyfourteen/style.css");
 
 
 #main-blog p img {
@@ -38,7 +37,7 @@ GitHub Branch:    master
 }
 
 /* iPhone [portrait + landscape] */
-@media only screen and (max-device-width: 480px) {
+/* @media only screen and (max-device-width: 480px) { */
 /* 
 	body { min-width: 550px; }
 	#content td>img { max-width: 75px; }
@@ -48,5 +47,7 @@ GitHub Branch:    master
 	#access a { line-height: 2em; }
 	#site-generator { padding: 1em 0.5em; }
  */
-	.entry-content p { padding: 1em; }
+/*
+ 	.entry-content p { padding: 1em; }
 }
+*/
