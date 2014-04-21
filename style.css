@@ -4,7 +4,7 @@ Theme URI:        http://drfragen.info/
 Description:      Child-Theme of TwentyFourteen.
 Author:           Andy Fragen
 Template:         twentyfourteen
-Version:          0.8.0
+Version:          0.8.1
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
 */
@@ -12,6 +12,7 @@ GitHub Branch:    master
 
 @import url("../twentyfourteen/style.css");
 
+div#secondary { background-color: lightgray; }
 
 #main-blog p img {
   display: block;
