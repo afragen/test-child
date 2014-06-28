@@ -21,17 +21,6 @@ li.tribe-events-adv-list-widget ol li {
 
 table.tribe-events-calendar { background-color: #fff; }
 
-/* iPhone [portrait + landscape] */
-/*
-@media only screen and (max-device-width: 480px) {
-	body { min-width: 550px; }
-	.tribe-events-thismonth, .tribe-events-othermonth { min-width: 50px; max-width:60px; }
-	#tribe-events-calendar-header { padding-top: 3em; }
-	.tribe-events-calendar-buttons { top:0; left:0; }
-	/* #tribe-events-event-meta .column { width: auto; } */
-}
-*/
-
 h2.tribe-events-page-title { color: green; }
 
 /* 

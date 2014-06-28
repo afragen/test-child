@@ -5,7 +5,7 @@ Description:      Child-Theme of TwentyFourteen.
 Author:           Andy Fragen
 Template:         twentyfourteen
 Template Version: 1.0
-Version:          0.8.3
+Version:          0.9.0
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
 */
@@ -37,19 +37,3 @@ div#secondary { background-color: lightgray; }
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-
-/* iPhone [portrait + landscape] */
-/* @media only screen and (max-device-width: 480px) { */
-/* 
-	body { min-width: 550px; }
-	#content td>img { max-width: 75px; }
-	#main, .singular.page .hentry { padding: 0;}
-	.singular h1.entry-title { font-size: 24px; }
-	.singular .entry-title { line-height: 1em; }
-	#access a { line-height: 2em; }
-	#site-generator { padding: 1em 0.5em; }
- */
-/*
- 	.entry-content p { padding: 1em; }
-}
-*/
