@@ -3,15 +3,13 @@ Theme Name:       Test
 Theme URI:        http://drfragen.info/
 Description:      Child-Theme of TwentyFourteen.
 Author:           Andy Fragen
-Template:         twentyfourteen
+Template:         twentyfifteen
 Template Version: 1.0
-Version:          0.9.0
+Version:          1.0.0
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
 */
 
-
-@import url("../twentyfourteen/style.css");
 
 div#secondary { background-color: lightgray; }
 
