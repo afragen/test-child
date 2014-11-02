@@ -4,7 +4,7 @@
 .site::before { width: 0; }
 
 /* fix for TwentyFifteen */
-li.type-tribe_events h4.entry-title.summary { font-size: 1.5em; }
+li.type-tribe_events h4.entry-title.summary { font-size: 1.25em; }
 .entry-content a, .tribe-mini-calendar-event { border-bottom: none; }
 ul.tribe-venue-widget-list li { list-style: none; }
 
