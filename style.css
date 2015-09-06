@@ -1,16 +1,13 @@
 /*
 Theme Name:       Test
-Theme URI:        http://drfragen.info/
+Theme URI:        http://thefragens.net/
 Description:      Child-Theme of TwentySixteen.
 Author:           Andy Fragen
 Template:         twentysixteen
-Version:          1.0.1
+Version:          1.1.0
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
 */
-
-
-/* div#secondary { background-color: lightgray; } */
 
 #main-blog p img {
   display: block;

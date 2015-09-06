@@ -1,5 +1,5 @@
 Test Child Theme
 ============================
 
-Child theme for drfragen.info based on TwentyFourteen.
+Child theme for my development site.
 
