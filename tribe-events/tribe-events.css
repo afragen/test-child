@@ -1,14 +1,16 @@
 /* The Events Calendar */
 
 /* TwentyFourteen fix */
-.site::before { width: 0; }
+/* .site::before { width: 0; } */
 
 /* fix for TwentyFifteen */
+/*
 li.type-tribe_events h4.entry-title.summary { font-size: 1.25em; }
 .entry-content a, .tribe-mini-calendar-event { border-bottom: none; }
 ul.tribe-venue-widget-list li { list-style: none; }
+*/
 
-/* 
+/*
 .tribe-events-calendar-buttons a { margin: 50px 0 0 10px; }
 .tribe-events-month-nav { margin-top: 20px; padding-top: 10px;}
 table.tribe-events-calendar { margin-top: 3em !important; }
@@ -27,7 +29,7 @@ table.tribe-events-calendar { background-color: #fff; }
 
 h2.tribe-events-page-title { color: green; }
 
-/* 
+/*
 li.tribe-events-list-widget-events h4.entry-title.summary a { font-size: 12px; }
 li.tribe-events-list-widget-events h4.entry-title.summary { padding-right: 100px; line-height: 30px;}
 .tribe-events-list-widget ol { margin:0; }
