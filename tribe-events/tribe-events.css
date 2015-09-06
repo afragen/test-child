@@ -4,18 +4,16 @@
 /* .site::before { width: 0; } */
 
 /* fix for TwentyFifteen */
-/*
 li.type-tribe_events h4.entry-title.summary { font-size: 1.25em; }
 .entry-content a, .tribe-mini-calendar-event { border-bottom: none; }
 ul.tribe-venue-widget-list li { list-style: none; }
-*/
 
 /*
 .tribe-events-calendar-buttons a { margin: 50px 0 0 10px; }
 .tribe-events-month-nav { margin-top: 20px; padding-top: 10px;}
 table.tribe-events-calendar { margin-top: 3em !important; }
 #tribe-events-calendar-header {  }
- */
+*/
 
 .tribe-events-event-list-meta td { background-color: transparent; }
 li.tribe-events-adv-list-widget ol li {
