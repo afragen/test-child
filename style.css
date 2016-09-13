@@ -4,30 +4,31 @@ Theme URI:        http://thefragens.net/
 Description:      Child-Theme of TwentySixteen.
 Author:           Andy Fragen
 Template:         twentysixteen
-Version:          1.1.0
+Version:          1.1.1
 GitHub Theme URI: https://github.com/afragen/test-child
 GitHub Branch:    master
+GitHub Language URI: https:github.com/afragen/github-updater-translations
 */
 
 #main-blog p img {
-  display: block;
-  position: relative;
-  background-color: #fff;
-  border: 1px solid #a9a9a9;
-  margin: -6px 6px 6px -6px;
-  padding: 4px;
-  margin-right: 1em;
-  -webkit-box-shadow: 3px 3px 3px #666;
-  -moz-box-shadow: 3px 3px 3px #666;
+	display: block;
+	position: relative;
+	background-color: #fff;
+	border: 1px solid #a9a9a9;
+	margin: -6px 6px 6px -6px;
+	padding: 4px;
+	margin-right: 1em;
+	-webkit-box-shadow: 3px 3px 3px #666;
+	-moz-box-shadow: 3px 3px 3px #666;
 }
 
 #main-blog p img.wp-smiley {
-  display: inline;
-  position: auto;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+	display: inline;
+	position: auto;
+	background-color: transparent;
+	border: none;
+	margin: 0;
+	padding: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
 }
