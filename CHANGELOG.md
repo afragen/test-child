@@ -1,6 +1,3 @@
-#### 1.1.1
-* testing translations
-
 #### 1.1.0
 * few tweaks for tribe-events.css
 * update `style.css` headers
